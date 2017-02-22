@@ -1,2 +1,1 @@
-# wpps
-WPPS, a Web Page Processing System
+# WPPS, a Web Page Processing System
