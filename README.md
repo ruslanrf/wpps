@@ -10,7 +10,7 @@ TODO: describe the installation-execution procedures.
 If you use WPPS, please cite one of the following publications (a BibTeX format):
 ```bibtex
 @inproceedings{Fayzrakhmanov2012WISE,
-  author = {Fayzrakhmanov, Ruslan Rustamovich},
+  author = {Fayzrakhmanov, Ruslan R.},
   booktitle = {In Proceedings of the 13th International Conference on Web Information Systems Engineering (WISE'2012), Demo Session, Paphos, Cyprus, 28–30 November, 2012},
   editor = {Wang, X. Sean and Cruz, Isabel and Delis, Alex and Huang, Guangyan},
   pages = {800--803},
