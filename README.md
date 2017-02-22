@@ -7,7 +7,7 @@ TODO: describe the installation-execution procedures.
 
 ## Citation
 
-If you use OXPath, please cite one of the following publications (a BibTeX format):
+If you use WPPS, please cite one of the following publications (a BibTeX format):
 ```bibtex
 @inproceedings{Fayzrakhmanov2012WISE,
   author = {Fayzrakhmanov, Ruslan Rustamovich},
