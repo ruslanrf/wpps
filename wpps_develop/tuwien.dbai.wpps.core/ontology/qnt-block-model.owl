@@ -1,0 +1,289 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY block "http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/block#" >
+    <!ENTITY common "http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/common#" >
+    <!ENTITY qnt-block-model "http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qnt-block-model#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qnt-block-model#"
+     xml:base="http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qnt-block-model"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:qnt-block-model="http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qnt-block-model#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:common="http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/common#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:block="http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/block#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qnt-block-model">
+        <owl:imports rdf:resource="http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/block"/>
+        <owl:imports rdf:resource="http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/common"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/common#hasPrimaryObject -->
+
+    <owl:ObjectProperty rdf:about="&common;hasPrimaryObject"/>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/common#hasReferenceObject -->
+
+    <owl:ObjectProperty rdf:about="&common;hasReferenceObject"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qnt-block-model#drawId -->
+
+    <owl:DatatypeProperty rdf:about="&qnt-block-model;drawId">
+        <rdfs:subPropertyOf rdf:resource="&common;id"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qnt-block-model#height -->
+
+    <owl:DatatypeProperty rdf:about="&qnt-block-model;height">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&block;Block"/>
+        <rdfs:subPropertyOf rdf:resource="&common;hasFloatValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qnt-block-model#layerId -->
+
+    <owl:DatatypeProperty rdf:about="&qnt-block-model;layerId">
+        <rdfs:subPropertyOf rdf:resource="&common;id"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qnt-block-model#width -->
+
+    <owl:DatatypeProperty rdf:about="&qnt-block-model;width">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&block;Block"/>
+        <rdfs:subPropertyOf rdf:resource="&common;hasFloatValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qnt-block-model#xCenter -->
+
+    <owl:DatatypeProperty rdf:about="&qnt-block-model;xCenter">
+        <rdfs:subPropertyOf rdf:resource="&common;hasFloatValue"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qnt-block-model#xMax -->
+
+    <owl:DatatypeProperty rdf:about="&qnt-block-model;xMax">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&block;Block"/>
+        <rdfs:subPropertyOf rdf:resource="&common;hasFloatValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qnt-block-model#xMin -->
+
+    <owl:DatatypeProperty rdf:about="&qnt-block-model;xMin">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&block;Block"/>
+        <rdfs:subPropertyOf rdf:resource="&common;hasFloatValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qnt-block-model#yCenter -->
+
+    <owl:DatatypeProperty rdf:about="&qnt-block-model;yCenter">
+        <rdfs:subPropertyOf rdf:resource="&common;hasFloatValue"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qnt-block-model#yMax -->
+
+    <owl:DatatypeProperty rdf:about="&qnt-block-model;yMax">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&block;Block"/>
+        <rdfs:subPropertyOf rdf:resource="&common;hasFloatValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qnt-block-model#yMin -->
+
+    <owl:DatatypeProperty rdf:about="&qnt-block-model;yMin">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&block;Block"/>
+        <rdfs:subPropertyOf rdf:resource="&common;hasFloatValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qnt-block-model#BorderDistance -->
+
+    <owl:Class rdf:about="&qnt-block-model;BorderDistance">
+        <rdfs:subClassOf rdf:resource="&common;Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qnt-block-model#BorderDistanceBB -->
+
+    <owl:Class rdf:about="&qnt-block-model;BorderDistanceBB">
+        <rdfs:subClassOf rdf:resource="&qnt-block-model;BorderDistance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qnt-block-model#BorderDistanceBT -->
+
+    <owl:Class rdf:about="&qnt-block-model;BorderDistanceBT">
+        <rdfs:subClassOf rdf:resource="&qnt-block-model;BorderDistance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qnt-block-model#BorderDistanceLL -->
+
+    <owl:Class rdf:about="&qnt-block-model;BorderDistanceLL">
+        <rdfs:subClassOf rdf:resource="&qnt-block-model;BorderDistance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qnt-block-model#BorderDistanceLR -->
+
+    <owl:Class rdf:about="&qnt-block-model;BorderDistanceLR">
+        <rdfs:subClassOf rdf:resource="&qnt-block-model;BorderDistance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qnt-block-model#BorderDistanceRL -->
+
+    <owl:Class rdf:about="&qnt-block-model;BorderDistanceRL">
+        <rdfs:subClassOf rdf:resource="&qnt-block-model;BorderDistance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qnt-block-model#BorderDistanceRR -->
+
+    <owl:Class rdf:about="&qnt-block-model;BorderDistanceRR">
+        <rdfs:subClassOf rdf:resource="&qnt-block-model;BorderDistance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qnt-block-model#BorderDistanceTB -->
+
+    <owl:Class rdf:about="&qnt-block-model;BorderDistanceTB">
+        <rdfs:subClassOf rdf:resource="&qnt-block-model;BorderDistance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qnt-block-model#BorderDistanceTT -->
+
+    <owl:Class rdf:about="&qnt-block-model;BorderDistanceTT">
+        <rdfs:subClassOf rdf:resource="&qnt-block-model;BorderDistance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qnt-block-model#Direction -->
+
+    <owl:Class rdf:about="&qnt-block-model;Direction">
+        <rdfs:subClassOf rdf:resource="&common;Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qnt-block-model#Distance -->
+
+    <owl:Class rdf:about="&qnt-block-model;Distance">
+        <rdfs:subClassOf rdf:resource="&common;SymmetricRelation"/>
+        <rdfs:comment>Symetric</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+

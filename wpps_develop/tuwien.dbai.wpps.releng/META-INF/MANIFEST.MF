@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Blindzilla's Target Platform
+Bundle-SymbolicName: tuwien.dbai.wpps.releng;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: DBAI TUWIEN
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.ui;bundle-version="3.5.0",
+ org.eclipse.ui.ide;bundle-version="3.5.0",
+ org.eclipse.debug.core;bundle-version="3.5.0",
+ tuwien.dbai.wpps.log4j;bundle-version="1.2.16"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy

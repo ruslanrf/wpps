@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+<extension
+         id="app"
+         name="WPPS application (en)"
+         point="org.eclipse.core.runtime.applications">
+      <application
+            cardinality="singleton-global"
+            icon="icons/earth-16.png"
+            thread="main"
+            visible="true">
+         <run
+               class="tuwien.dbai.wpps.ui.application.WPPSUIApplication">
+         </run>
+      </application>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="tuwien.dbai.wpps.ui.perspectives.WPPSUIPerspectiveDevFactory"
+            icon="icons/earth-16.png"
+            id="tuwien.dbai.wpps.ui.perspectives.develop"
+            name="WPPS Perspective Development">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="tuwien.dbai.wpps.ui.commands.devCategory"
+            name="WPPS Development Commands Category">
+      </category>
+      <command
+            categoryId="tuwien.dbai.wpps.ui.commands.devCategory"
+            defaultHandler="tuwien.dbai.wpps.ui.commandhandlers.RunSelectedMethodsCmdHdlr"
+            description="Apply selected methods for active browser editor."
+            id="tuwien.dbai.wpps.ui.command.runSelMethods"
+            name="Apply Methods">
+      </command>
+ 
+      <command
+            categoryId="tuwien.dbai.wpps.ui.commands.devCategory"
+            defaultHandler="tuwien.dbai.wpps.ui.commandhandlers.SetWPPSConfigFileCmdHdlr"
+            id="tuwien.dbai.wpps.ui.command.setWPPSConfigFile"
+            name="Open configuration file">
+      </command>
+      <command
+            categoryId="tuwien.dbai.wpps.ui.commands.devCategory"
+            defaultHandler="tuwien.dbai.wpps.ui.commandhandlers.SaveUOMCmdHdlr"
+            id="tuwien.dbai.wpps.ui.command.saveUOM"
+            name="Save UOM">
+      </command>
+      <category
+            id="tuwien.dbai.wpps.ui.commands.ontGraphCategory"
+            name="OntoGraph">
+      </category>
+      <command
+            categoryId="tuwien.dbai.wpps.ui.commands.ontGraphCategory"
+            defaultHandler="tuwien.dbai.wpps.ui.commandhandlers.ontgraph.SetOntGraphLayoutCmdHdlr"
+            id="tuwien.dbai.wpps.ui.command.setOntGraphLayout"
+            name="Change ontologies graph&apos;s layout">
+         <state
+               id="org.eclipse.ui.commands.radioState">
+            <class
+                  class="org.eclipse.ui.handlers.RadioState">
+               <parameter
+                     name="default"
+                     value="Radial">
+               </parameter>
+               <parameter
+                     name="persisted"
+                     value="false">
+               </parameter>
+            </class>
+         </state>
+         <commandParameter
+               id="org.eclipse.ui.commands.radioStateParameter"
+               name="State"
+               optional="false">
+         </commandParameter>
+      </command>
+      <category
+            id="tuwien.dbai.wpps.ui.commands.BlindzillaCategory"
+            name="Blindzilla">
+      </category>
+      <command
+            categoryId="tuwien.dbai.wpps.ui.commands.BlindzillaCategory"
+            defaultHandler="tuwien.dbai.wpps.ui.commandhandlers.blindzilla.BlindzillaModeCmdHdlr"
+            id="tuwien.dbai.wpps.blindzilla.ui.command.blindzillaMode"
+            name="Blindzilla Mode">
+         <state
+               class="org.eclipse.ui.handlers.RegistryToggleState:true"
+               id="org.eclipse.ui.commands.toggleState">
+         </state>
+      </command> </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               id="tuwien.dbai.wpps.ui.menus.main"
+               label="WPPS">
+            <command
+                  commandId="tuwien.dbai.wpps.ui.command.setWPPSConfigFile"
+                  icon="icons/Actions-document-open-icon-16.png"
+                  label="Open configuration file"
+                  style="push">
+            </command>
+            <command
+                  commandId="tuwien.dbai.wpps.ui.command.saveUOM"
+                  icon="icons/Floppy-5-25-inch-icon.png"
+                  label="Save UOM"
+                  style="push">
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="tuwien.dbai.wpps.ui.toolbars.devMain">
+            <command
+                  commandId="tuwien.dbai.wpps.commands.openbrowser"
+                  icon="icons/mozilla-16.png"
+                  label="New"
+                  style="push"
+                  tooltip="Open new web browser">
+            </command>
+            <separator
+                  name="tuwien.dbai.wpps.ui.separator1"
+                  visible="true">
+            </separator>
+            <command
+                  commandId="tuwien.dbai.wpps.ui.command.setWPPSConfigFile"
+                  icon="icons/Actions-document-open-icon-16.png"
+                  label="Open configuration file"
+                  style="push"
+                  tooltip="Open configuration file">
+            </command>
+            <command
+                  commandId="tuwien.dbai.wpps.ui.command.saveUOM"
+                  icon="icons/Floppy-5-25-inch-icon.png"
+                  label="Save UOM"
+                  style="push">
+            </command>
+            <separator
+                  name="tuwien.dbai.wpps.ui.separator1">
+            </separator>
+         </toolbar>
+      </menuContribution>
+      <menuContribution
+            locationURI="menu:file?after=additions">
+         <command
+               commandId="tuwien.dbai.wpps.commands.openbrowser"
+               icon="icons/mozilla-16.png"
+               label="New"
+               style="push"
+               tooltip="Open new web browser">
+         </command>
+      </menuContribution>
+      <menuContribution
+            locationURI="toolbar:tuwien.dbai.wpps.ui.view.methodslist?after=additions">
+         <command
+               commandId="tuwien.dbai.wpps.ui.command.runSelMethods"
+               icon="icons/run2-16.png"
+               label="Run"
+               style="push"
+               tooltip="Run selected method for active browser editor.">
+         </command>
+      </menuContribution>
+      <menuContribution
+            locationURI="toolbar:tuwien.dbai.wpps.ui.view.ontologiesGraphView?after=additions">
+         <command
+               commandId="tuwien.dbai.wpps.ui.command.setOntGraphLayout"
+               label="Radial"
+               style="radio"
+               tooltip="Radial layout">
+            <parameter
+                  name="org.eclipse.ui.commands.radioStateParameter"
+                  value="Radial">
+            </parameter>
+         </command>
+         <command
+               commandId="tuwien.dbai.wpps.ui.command.setOntGraphLayout"
+               label="Tree"
+               style="radio"
+               tooltip="Tree layout">
+            <parameter
+                  name="org.eclipse.ui.commands.radioStateParameter"
+                  value="Tree">
+            </parameter>
+         </command>
+         <command
+               commandId="tuwien.dbai.wpps.ui.command.setOntGraphLayout"
+               label="Direct"
+               style="radio"
+               tooltip="Direct layout">
+            <parameter
+                  name="org.eclipse.ui.commands.radioStateParameter"
+                  value="Direct">
+            </parameter>
+         </command>
+         <command
+               commandId="tuwien.dbai.wpps.ui.command.setOntGraphLayout"
+               label="Spring"
+               style="radio"
+               tooltip="Spring layout">
+            <parameter
+                  name="org.eclipse.ui.commands.radioStateParameter"
+                  value="Spring">
+            </parameter>
+         </command>
+         <command
+               commandId="tuwien.dbai.wpps.ui.command.setOntGraphLayout"
+               label="Grid"
+               style="radio"
+               tooltip="Grid layout">
+            <parameter
+                  name="org.eclipse.ui.commands.radioStateParameter"
+                  value="Grid">
+            </parameter>
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="tuwien.dbai.wpps.ui.views.MethodsListView"
+            icon="icons/rocket-launch-16.png"
+            id="tuwien.dbai.wpps.ui.view.methodslist"
+            name="Methods">
+      </view>
+      <view
+            class="tuwien.dbai.wpps.ui.views.TestView"
+            id="tuwien.dbai.wpps.ui.views.Test"
+            name="New ViewPart">
+      </view>
+      <view
+            class="tuwien.dbai.wpps.ui.views.ontgraph.OntologiesGraphView"
+            icon="icons/rdf_flyer-16.gif"
+            id="tuwien.dbai.wpps.ui.view.ontologiesGraphView"
+            name="Ontologies Graph">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+   </extension>
+</plugin>

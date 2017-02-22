@@ -1,0 +1,1486 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY block "http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/block#" >
+    <!ENTITY common "http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/common#" >
+    <!ENTITY qlt-block-model "http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#"
+     xml:base="http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:qlt-block-model="http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:common="http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/common#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:block="http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/block#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model">
+        <owl:imports rdf:resource="http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/block"/>
+        <owl:imports rdf:resource="http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/common"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/common#hasPrimaryObject -->
+
+    <owl:ObjectProperty rdf:about="&common;hasPrimaryObject">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&block;Block"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/common#hasReferenceObject -->
+
+    <owl:ObjectProperty rdf:about="&common;hasReferenceObject">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&block;Block"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/common#hasUnit -->
+
+    <owl:ObjectProperty rdf:about="&common;hasUnit"/>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#C -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;C">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasRCC8Relation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#DC -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;DC">
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;DR"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasJEPDRCC8Relation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#DR -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;DR">
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasRCC8Relation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#EC -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;EC">
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;C"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;DR"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasJEPDRCC8Relation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#EQ -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;EQ">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;P"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;Pi"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasJEPDRCC8Relation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#NTPP -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;NTPP">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <owl:inverseOf rdf:resource="&qlt-block-model;NTPPi"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;PP"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasJEPDRCC8Relation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#NTPPi -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;NTPPi">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;PPi"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasJEPDRCC8Relation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#O -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;O">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;C"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#P -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;P">
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;O"/>
+        <owl:inverseOf rdf:resource="&qlt-block-model;Pi"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#PO -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;PO">
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;O"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasJEPDRCC8Relation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#PP -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;PP">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;P"/>
+        <owl:inverseOf rdf:resource="&qlt-block-model;PPi"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#PPi -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;PPi">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;Pi"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#Pi -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;Pi">
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;O"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#TPP -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;TPP">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;PP"/>
+        <owl:inverseOf rdf:resource="&qlt-block-model;TPPi"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasJEPDRCC8Relation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#TPPi -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;TPPi">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;PPi"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasJEPDRCC8Relation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#afterLayer -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;afterLayer">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <owl:inverseOf rdf:resource="&qlt-block-model;beforeLayer"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelationLayer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#afterX -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;afterX">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <owl:inverseOf rdf:resource="&qlt-block-model;beforeX"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelationX"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#afterY -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;afterY">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <owl:inverseOf rdf:resource="&qlt-block-model;beforeY"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelationY"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#afterZ -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;afterZ">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <owl:inverseOf rdf:resource="&qlt-block-model;beforeZ"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelationZ"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#alignedWith -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;alignedWith">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasAlignmentRelation"/>
+        <owl:propertyDisjointWith rdf:resource="&qlt-block-model;notAlignedWith"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#beforeLayer -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;beforeLayer">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelationLayer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#beforeX -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;beforeX">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelationX"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#beforeY -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;beforeY">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelationY"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#beforeZ -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;beforeZ">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelationZ"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#bottomAlignedWith -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;bottomAlignedWith">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;verticallyAligned"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#centeredHorizontallyWith -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;centeredHorizontallyWith">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;verticallyAligned"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#centeredVerticallyWith -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;centeredVerticallyWith">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;horizontallyAlignedWith"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#centeredX -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;centeredX">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:comment>REMOVE!</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelationX"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#centeredY -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;centeredY">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:comment>REMOVE!</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelationY"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#close -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;close">
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasDistanceRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#containsX -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;containsX">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelationX"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#containsY -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;containsY">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelationY"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#eastNeighboringBlockOf -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;eastNeighboringBlockOf">
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;eastOfO"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasNeighboringBlock"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#eastOfCe -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;eastOfCe">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasCenterDirectionRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#eastOfO -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;eastOfO">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasODirectionRelation"/>
+        <owl:inverseOf rdf:resource="&qlt-block-model;westOfO"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#eastOfP -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;eastOfP">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasPDirectionRelation"/>
+        <owl:inverseOf rdf:resource="&qlt-block-model;westOfP"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#eastOrthogonalVisibleBlockOf -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;eastOrthogonalVisibleBlockOf">
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;eastOfO"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasOrthogonalVisibilityRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#equalsLayer -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;equalsLayer">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelationLayer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#equalsX -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;equalsX">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelationX"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#equalsY -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;equalsY">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelationY"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#equalsZ -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;equalsZ">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelationZ"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#far -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;far">
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasDistanceRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#finishedByX -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;finishedByX">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <owl:inverseOf rdf:resource="&qlt-block-model;finishesX"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelationX"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#finishedByY -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;finishedByY">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <owl:inverseOf rdf:resource="&qlt-block-model;finishesY"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelationY"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#finishesX -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;finishesX">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelationX"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#finishesY -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;finishesY">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelationY"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#hasAlignmentRelation -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;hasAlignmentRelation">
+        <rdfs:range rdf:resource="&block;Block"/>
+        <rdfs:domain rdf:resource="&block;Block"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#hasCenterDirectionRelation -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;hasCenterDirectionRelation">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasDirectionRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#hasDirectionRelation -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;hasDirectionRelation">
+        <rdfs:comment>TODO: add absolute center direction relation, which will have an inverse.</rdfs:comment>
+        <rdfs:domain rdf:resource="&block;Block"/>
+        <rdfs:range rdf:resource="&block;Block"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#hasDistanceRelation -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;hasDistanceRelation">
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:domain rdf:resource="&block;Block"/>
+        <rdfs:range rdf:resource="&block;Block"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#hasIntervalRelation -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;hasIntervalRelation">
+        <rdfs:range rdf:resource="&block;Block"/>
+        <rdfs:domain rdf:resource="&block;Block"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#hasIntervalRelationLayer -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;hasIntervalRelationLayer">
+        <rdfs:comment rdf:datatype="&xsd;string">Is not used yet</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#hasIntervalRelationX -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;hasIntervalRelationX">
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#hasIntervalRelationY -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;hasIntervalRelationY">
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#hasIntervalRelationZ -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;hasIntervalRelationZ">
+        <rdfs:comment rdf:datatype="&xsd;string">Do not know how to use now</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#hasJEPDRCC8Relation -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;hasJEPDRCC8Relation">
+        <rdfs:domain rdf:resource="&block;Block"/>
+        <rdfs:range rdf:resource="&block;Block"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#hasNeighboringBlock -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;hasNeighboringBlock">
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasODirectionRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#hasNoHorizontalAlignmentWith -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;hasNoHorizontalAlignmentWith">
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;notAlignedWith"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#hasNoVerticalAlignmentWith -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;hasNoVerticalAlignmentWith">
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;notAlignedWith"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#hasODirectionRelation -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;hasODirectionRelation">
+        <rdfs:comment rdf:datatype="&xsd;string">Originally it was property hasApproximateDirectionRelation</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasDirectionRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#hasOrthogonalVisibilityRelation -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;hasOrthogonalVisibilityRelation">
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasODirectionRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#hasPDirectionRelation -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;hasPDirectionRelation">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Originally it was property hasAccurateDirectionRelation.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasDirectionRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#hasRCC8Relation -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;hasRCC8Relation">
+        <rdfs:range rdf:resource="&block;Block"/>
+        <rdfs:domain rdf:resource="&block;Block"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#horizontallyAlignedWith -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;horizontallyAlignedWith">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;alignedWith"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#insideX -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;insideX">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <owl:inverseOf rdf:resource="&qlt-block-model;containsX"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelationX"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#insideY -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;insideY">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <owl:inverseOf rdf:resource="&qlt-block-model;containsY"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelationY"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#leftAlignedWith -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;leftAlignedWith">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;horizontallyAlignedWith"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#nearestEastNeighboringBlockOf -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;nearestEastNeighboringBlockOf">
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;eastNeighboringBlockOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#nearestNorthNeighboringBlockOf -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;nearestNorthNeighboringBlockOf">
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;northNeighboringBlockOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#nearestSouthNeighboringBlockOf -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;nearestSouthNeighboringBlockOf">
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;southNeighboringBlockOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#nearestWestNeighboringBlockOf -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;nearestWestNeighboringBlockOf">
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;westNeighboringBlockOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#northEastOfCe -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;northEastOfCe">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasCenterDirectionRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#northEastOfO -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;northEastOfO">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasODirectionRelation"/>
+        <owl:inverseOf rdf:resource="&qlt-block-model;southWestOfO"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#northEastOfP -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;northEastOfP">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasPDirectionRelation"/>
+        <owl:inverseOf rdf:resource="&qlt-block-model;southWestOfP"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#northNeighboringBlockOf -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;northNeighboringBlockOf">
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasNeighboringBlock"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;northOfO"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#northOfCe -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;northOfCe">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasCenterDirectionRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#northOfO -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;northOfO">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasODirectionRelation"/>
+        <owl:inverseOf rdf:resource="&qlt-block-model;southOfO"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#northOfP -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;northOfP">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasPDirectionRelation"/>
+        <owl:inverseOf rdf:resource="&qlt-block-model;southOfP"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#northOrthogonalVisibleBlockOf -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;northOrthogonalVisibleBlockOf">
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasOrthogonalVisibilityRelation"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;northOfO"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#northWestOfCe -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;northWestOfCe">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasCenterDirectionRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#northWestOfO -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;northWestOfO">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasODirectionRelation"/>
+        <owl:inverseOf rdf:resource="&qlt-block-model;southEastOfO"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#northWestOfP -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;northWestOfP">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasPDirectionRelation"/>
+        <owl:inverseOf rdf:resource="&qlt-block-model;southEastOfP"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#notAlignedWith -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;notAlignedWith">
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasAlignmentRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#notFar -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;notFar">
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasDistanceRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#overlapedByX -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;overlapedByX">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelationX"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#overlapedByY -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;overlapedByY">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelationY"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#overlapsX -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;overlapsX">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelationX"/>
+        <owl:inverseOf rdf:resource="&qlt-block-model;overlapedByX"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#overlapsY -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;overlapsY">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelationY"/>
+        <owl:inverseOf rdf:resource="&qlt-block-model;overlapedByY"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#rightAlignedWith -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;rightAlignedWith">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;horizontallyAlignedWith"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#southEastOfCe -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;southEastOfCe">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasCenterDirectionRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#southEastOfO -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;southEastOfO">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasODirectionRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#southEastOfP -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;southEastOfP">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasPDirectionRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#southNeighboringBlockOf -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;southNeighboringBlockOf">
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasNeighboringBlock"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;southOfO"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#southOfCe -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;southOfCe">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasCenterDirectionRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#southOfO -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;southOfO">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasODirectionRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#southOfP -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;southOfP">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasPDirectionRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#southOrthogonalVisibleBlockOf -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;southOrthogonalVisibleBlockOf">
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasOrthogonalVisibilityRelation"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;southOfO"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#southWestOfCe -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;southWestOfCe">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasCenterDirectionRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#southWestOfO -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;southWestOfO">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasODirectionRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#southWestOfP -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;southWestOfP">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasPDirectionRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#startedByX -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;startedByX">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelationX"/>
+        <owl:inverseOf rdf:resource="&qlt-block-model;startsX"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#startedByY -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;startedByY">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelationY"/>
+        <owl:inverseOf rdf:resource="&qlt-block-model;startsY"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#startsX -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;startsX">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelationX"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#startsY -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;startsY">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelationY"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#topAlignedWith -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;topAlignedWith">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;verticallyAligned"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#touchedByLayer -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;touchedByLayer">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelationLayer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#touchedByX -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;touchedByX">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelationX"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#touchedByY -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;touchedByY">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelationY"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#touchedByZ -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;touchedByZ">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelationZ"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#touchesLayer -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;touchesLayer">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelationLayer"/>
+        <owl:inverseOf rdf:resource="&qlt-block-model;touchedByLayer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#touchesX -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;touchesX">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelationX"/>
+        <owl:inverseOf rdf:resource="&qlt-block-model;touchedByX"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#touchesY -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;touchesY">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelationY"/>
+        <owl:inverseOf rdf:resource="&qlt-block-model;touchedByY"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#touchesZ -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;touchesZ">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasIntervalRelationZ"/>
+        <owl:inverseOf rdf:resource="&qlt-block-model;touchedByZ"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#verticallyAligned -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;verticallyAligned">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;alignedWith"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#veryClose -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;veryClose">
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasDistanceRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#veryFar -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;veryFar">
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasDistanceRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#westNeighboringBlockOf -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;westNeighboringBlockOf">
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasNeighboringBlock"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;westOfO"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#westOfCe -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;westOfCe">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasCenterDirectionRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#westOfO -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;westOfO">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasODirectionRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#westOfP -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;westOfP">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasPDirectionRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#westOrthogonalVisibleBlockOf -->
+
+    <owl:ObjectProperty rdf:about="&qlt-block-model;westOrthogonalVisibleBlockOf">
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;hasOrthogonalVisibilityRelation"/>
+        <rdfs:subPropertyOf rdf:resource="&qlt-block-model;westOfO"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#distanceValueMax -->
+
+    <owl:DatatypeProperty rdf:about="&qlt-block-model;distanceValueMax">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#distanceValueMin -->
+
+    <owl:DatatypeProperty rdf:about="&qlt-block-model;distanceValueMin">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/block#Block -->
+
+    <owl:Class rdf:about="&block;Block"/>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#DistanceScale -->
+
+    <owl:Class rdf:about="&qlt-block-model;DistanceScale">
+        <rdfs:comment>REMOVE!</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#closeDef -->
+
+    <owl:Thing rdf:about="&qlt-block-model;closeDef">
+        <rdf:type rdf:resource="&qlt-block-model;DistanceScale"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <distanceValueMax rdf:datatype="&xsd;float">20</distanceValueMax>
+        <distanceValueMin rdf:datatype="&xsd;float">5</distanceValueMin>
+        <common:hasUnit rdf:resource="&common;pixel"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#farDef -->
+
+    <owl:Thing rdf:about="&qlt-block-model;farDef">
+        <rdf:type rdf:resource="&qlt-block-model;DistanceScale"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <distanceValueMin rdf:datatype="&xsd;float">100</distanceValueMin>
+        <distanceValueMax rdf:datatype="&xsd;float">500</distanceValueMax>
+        <common:hasUnit rdf:resource="&common;pixel"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#notFarDef -->
+
+    <owl:Thing rdf:about="&qlt-block-model;notFarDef">
+        <rdf:type rdf:resource="&qlt-block-model;DistanceScale"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <distanceValueMax rdf:datatype="&xsd;float">100</distanceValueMax>
+        <distanceValueMin rdf:datatype="&xsd;float">20</distanceValueMin>
+        <common:hasUnit rdf:resource="&common;pixel"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#veryCloseDef -->
+
+    <owl:Thing rdf:about="&qlt-block-model;veryCloseDef">
+        <rdf:type rdf:resource="&qlt-block-model;DistanceScale"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <distanceValueMin rdf:datatype="&xsd;float">0</distanceValueMin>
+        <distanceValueMax rdf:datatype="&xsd;float">5</distanceValueMax>
+        <common:hasUnit rdf:resource="&common;pixel"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model#veryFarDef -->
+
+    <owl:Thing rdf:about="&qlt-block-model;veryFarDef">
+        <rdf:type rdf:resource="&qlt-block-model;DistanceScale"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <distanceValueMax rdf:datatype="&xsd;float">-1</distanceValueMax>
+        <distanceValueMin rdf:datatype="&xsd;float">500</distanceValueMin>
+        <common:hasUnit rdf:resource="&common;pixel"/>
+    </owl:Thing>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&qlt-block-model;close"/>
+            <rdf:Description rdf:about="&qlt-block-model;far"/>
+            <rdf:Description rdf:about="&qlt-block-model;notFar"/>
+            <rdf:Description rdf:about="&qlt-block-model;veryClose"/>
+            <rdf:Description rdf:about="&qlt-block-model;veryFar"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&qlt-block-model;afterY"/>
+            <rdf:Description rdf:about="&qlt-block-model;beforeY"/>
+            <rdf:Description rdf:about="&qlt-block-model;centeredY"/>
+            <rdf:Description rdf:about="&qlt-block-model;containsY"/>
+            <rdf:Description rdf:about="&qlt-block-model;equalsY"/>
+            <rdf:Description rdf:about="&qlt-block-model;finishedByY"/>
+            <rdf:Description rdf:about="&qlt-block-model;finishesY"/>
+            <rdf:Description rdf:about="&qlt-block-model;insideY"/>
+            <rdf:Description rdf:about="&qlt-block-model;overlapedByY"/>
+            <rdf:Description rdf:about="&qlt-block-model;overlapsY"/>
+            <rdf:Description rdf:about="&qlt-block-model;startedByY"/>
+            <rdf:Description rdf:about="&qlt-block-model;startsY"/>
+            <rdf:Description rdf:about="&qlt-block-model;touchedByY"/>
+            <rdf:Description rdf:about="&qlt-block-model;touchesY"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&qlt-block-model;afterZ"/>
+            <rdf:Description rdf:about="&qlt-block-model;beforeZ"/>
+            <rdf:Description rdf:about="&qlt-block-model;equalsZ"/>
+            <rdf:Description rdf:about="&qlt-block-model;touchedByZ"/>
+            <rdf:Description rdf:about="&qlt-block-model;touchesZ"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+

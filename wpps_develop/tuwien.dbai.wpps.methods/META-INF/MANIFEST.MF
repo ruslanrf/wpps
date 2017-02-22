@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Methods
+Bundle-SymbolicName: tuwien.dbai.wpps.methods
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: tuwien.dbai.wpps.methods.MethodsActivator
+Require-Bundle: org.eclipse.core.runtime
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

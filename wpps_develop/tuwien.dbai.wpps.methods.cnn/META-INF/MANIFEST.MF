@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: CNN methods
+Bundle-SymbolicName: tuwien.dbai.wpps.methods.cnn
+Bundle-Version: 1.0.0.qualifier
+Fragment-Host: tuwien.dbai.wpps.core;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="tuwien.dbai.wpps.embrowser.EMBrowserEditor"
+            default="false"
+            extensions="html, htm, xhtml"
+            icon="icons/mozilla-16.png"
+            id="tuwien.dbai.wpps.editors.embrowser"
+            name="Browser">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="tuwien.dbai.wpps.embrowser.commands.OpenBrowserCmdHandler"
+            description="Open new web browser"
+            id="tuwien.dbai.wpps.commands.openbrowser"
+            name="Open Web Browser">
+      </command>
+   </extension>
+
+</plugin>

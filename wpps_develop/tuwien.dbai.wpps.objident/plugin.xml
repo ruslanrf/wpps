@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="app"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="tuwien.dbai.wpps.objident.ui.app.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="tuwien.dbai.wpps.objident.ui.app.ObjIdentPerspective"
+            icon="icons/earth-16.png"
+            id="tuwien.dbai.wpps.objident.perspectives.main"
+            name="Object Identification">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="tuwien.dbai.wpps.objident.ui.views.FeaturesView"
+            icon="icons/property-blue-16.png"
+            id="tuwien.dbai.wpps.objident.ui.views.FeaturesView"
+            name="Features">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="tuwien.dbai.wpps.objident.toolbars.featureCorrespondence">
+            <command
+                  commandId="tuwien.dbai.wpps.objident.commands.comparationPairTypeChange"
+                  icon="icons/Positive-icon-16.png"
+                  label="Positive"
+                  style="radio"
+                  tooltip="Positive examples mode">
+               <parameter
+                     name="org.eclipse.ui.commands.radioStateParameter"
+                     value="positive">
+               </parameter>
+            </command>
+            <command
+                  commandId="tuwien.dbai.wpps.objident.commands.comparationPairTypeChange"
+                  icon="icons/Negative-icon-16.png"
+                  label="Negative"
+                  style="radio"
+                  tooltip="Negative examples mode">
+               <parameter
+                     name="org.eclipse.ui.commands.radioStateParameter"
+                     value="negative">
+               </parameter>
+            </command>
+            <command
+                  commandId="tuwien.dbai.wpps.objident.commands.addComparisonPairFeatures"
+                  icon="icons/Add-icon-16.png"
+                  label="Add example"
+                  style="push"
+                  tooltip="Add features of comparation pair (target objects in both editors must be selected)">
+            </command>
+            <separator
+                  name="tuwien.dbai.wpps.objident.separator1"
+                  visible="true">
+            </separator>
+            <command
+                  commandId="tuwien.dbai.wpps.objident.commands.collectComparisonPairsFeaturesOnLabeledWP"
+                  icon="icons/search-add-icon-16.png"
+                  label="Collect examples"
+                  style="push"
+                  tooltip="Collect features of objects on a labeled web page">
+            </command>
+            <separator
+                  name="tuwien.dbai.wpps.objident.separator1"
+                  visible="true">
+            </separator>
+            <command
+                  commandId="tuwien.dbai.wpps.objident.commands.collectComparisonPairsFeaturesInLabeledDir"
+                  icon="icons/folder-full-add-icon-16.png"
+                  label="Collect examples in directory"
+                  style="push"
+                  tooltip="Collect features of objects from a directotry with labeled web pages">
+            </command>
+            <separator
+                  name="tuwien.dbai.wpps.objident.separator2"
+                  visible="true">
+            </separator>
+            <command
+                  commandId="tuwien.dbai.wpps.objident.commands.rmComparisonPairsFeatures"
+                  icon="icons/Actions-draw-eraser-icon-16.png"
+                  label="Remove examples features"
+                  style="push"
+                  tooltip="Remove all features of objects">
+            </command>
+            <command
+                  commandId="tuwien.dbai.wpps.objident.commands.saveComparisonObjectsFeaturesCmdHdlr"
+                  icon="icons/1352916995_save_all-16.png"
+                  label="Save features"
+                  style="push"
+                  tooltip="Save features of pairs of object for further analysis">
+            </command>
+         </toolbar>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="tuwien.dbai.wpps.objident.toolbars.transportSearchExperiment">
+            <control
+                  class="tuwien.dbai.wpps.objident.ui.controls.transportSearchExperiment.ScenarioComboBox"
+                  id="tuwien.dbai.wpps.objident.controls.transportSearchExperiment.scenario">
+            </control>
+            <control
+                  class="tuwien.dbai.wpps.objident.ui.controls.transportSearchExperiment.WebPageIdTextField"
+                  id="tuwien.dbai.wpps.objident.controls.transportSearchExperiment.webPageId">
+            </control>
+            <control
+                  class="tuwien.dbai.wpps.objident.ui.controls.transportSearchExperiment.WebFormAttrTypeComboBox"
+                  id="tuwien.dbai.wpps.objident.controls.transportSearchExperiment.webFormAttrType">
+            </control>
+            <command
+                  commandId="tuwien.dbai.wpps.objident.commands.transportSearchExperiment.addFeatures"
+                  icon="icons/1352914978_add1-16.png"
+                  label="Add features"
+                  style="push"
+                  tooltip="Add features for the selected object">
+            </command>
+            <separator
+                  name="tuwien.dbai.wpps.objident.separator2">
+            </separator>
+            <command
+                  commandId="tuwien.dbai.wpps.objident.commands.transportSearchExperiment.addFeaturesForOthers"
+                  icon="icons/1352916667_video_(add)_16.gif"
+                  label="Add others"
+                  style="push">
+            </command>
+            <separator
+                  name="tuwien.dbai.wpps.objident.separator1"
+                  visible="true">
+            </separator>
+            <command
+                  commandId="tuwien.dbai.wpps.objident.commands.transportSearchExperiment.cleanCollectionOfFeatures"
+                  icon="icons/1352916868_eraser-16.png"
+                  label="Clean collection of features"
+                  style="push">
+            </command>
+            <command
+                  commandId="tuwien.dbai.wpps.objident.commands.transportSearchExperiment.saveFeatures"
+                  icon="icons/1352916965_disk-16.png"
+                  label="Save features"
+                  style="push">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="tuwien.dbai.wpps.objident.commands.mainCategory"
+            name="Main">
+      </category>
+      <command
+            categoryId="tuwien.dbai.wpps.objident.commands.mainCategory"
+            defaultHandler="tuwien.dbai.wpps.objident.command.ComparationPairTypeChangeCmdHdlr"
+            id="tuwien.dbai.wpps.objident.commands.comparationPairTypeChange"
+            name="Change Comparation Pair Type">
+         <state
+               id="org.eclipse.ui.commands.radioState">
+            <class
+                  class="org.eclipse.ui.handlers.RadioState">
+               <parameter
+                     name="default"
+                     value="positive">
+               </parameter>
+               <parameter
+                     name="persisted"
+                     value="false">
+               </parameter>
+            </class>
+         </state>
+         <commandParameter
+               id="org.eclipse.ui.commands.radioStateParameter"
+               name="State"
+               optional="false">
+         </commandParameter>
+      </command>
+      <command
+            categoryId="tuwien.dbai.wpps.objident.commands.mainCategory"
+            defaultHandler="tuwien.dbai.wpps.objident.command.AddComparisonPairFeaturesCmdHdlr"
+            id="tuwien.dbai.wpps.objident.commands.addComparisonPairFeatures"
+            name="Add example features">
+      </command>
+      <command
+            categoryId="tuwien.dbai.wpps.objident.commands.mainCategory"
+            defaultHandler="tuwien.dbai.wpps.objident.command.CollectComparisonPairsFeaturesOnLabeledWPCmdHdlr"
+            id="tuwien.dbai.wpps.objident.commands.collectComparisonPairsFeaturesOnLabeledWP"
+            name="Collect examples">
+      </command>
+      <command
+            categoryId="tuwien.dbai.wpps.objident.commands.mainCategory"
+            defaultHandler="tuwien.dbai.wpps.objident.command.SaveComparisonObjectsFeaturesCmdHdlr"
+            id="tuwien.dbai.wpps.objident.commands.saveComparisonObjectsFeaturesCmdHdlr"
+            name="Save features">
+      </command>
+      <command
+            categoryId="tuwien.dbai.wpps.objident.commands.mainCategory"
+            defaultHandler="tuwien.dbai.wpps.objident.command.CollectExamplesCmdHdlr"
+            id="tuwien.dbai.wpps.objident.commands.collectComparisonPairsFeaturesInLabeledDir"
+            name="Collect examples in directory">
+      </command>
+      <command
+            categoryId="tuwien.dbai.wpps.objident.commands.mainCategory"
+            defaultHandler="tuwien.dbai.wpps.objident.command.RmComparisonPairsFeaturesCmdHdlr"
+            id="tuwien.dbai.wpps.objident.commands.rmComparisonPairsFeatures"
+            name="Remove examples features">
+      </command>
+      <category
+            id="tuwien.dbai.wpps.objident.commands.transportSearchExperimentCategory"
+            name="Transport Search Experiment">
+      </category>
+      <command
+            categoryId="tuwien.dbai.wpps.objident.commands.transportSearchExperimentCategory"
+            defaultHandler="tuwien.dbai.wpps.objident.command.transportSearchExperiment.AddFeaturesCmdHdlr"
+            id="tuwien.dbai.wpps.objident.commands.transportSearchExperiment.addFeatures"
+            name="Add features">
+      </command>
+      <command
+            categoryId="tuwien.dbai.wpps.objident.commands.transportSearchExperimentCategory"
+            defaultHandler="tuwien.dbai.wpps.objident.command.transportSearchExperiment.AddFeaturesForOthersCmdHdlr"
+            description="Add other elements"
+            id="tuwien.dbai.wpps.objident.commands.transportSearchExperiment.addFeaturesForOthers"
+            name="Add others">
+      </command>
+      <command
+            categoryId="tuwien.dbai.wpps.objident.commands.transportSearchExperimentCategory"
+            defaultHandler="tuwien.dbai.wpps.objident.command.transportSearchExperiment.CleanCollectionOfFeaturesCmdHdlr"
+            id="tuwien.dbai.wpps.objident.commands.transportSearchExperiment.cleanCollectionOfFeatures"
+            name="Clean collection">
+      </command>
+      <command
+            categoryId="tuwien.dbai.wpps.objident.commands.transportSearchExperimentCategory"
+            defaultHandler="tuwien.dbai.wpps.objident.command.transportSearchExperiment.SaveFeaturesCmdHdlr"
+            id="tuwien.dbai.wpps.objident.commands.transportSearchExperiment.saveFeatures"
+            name="Save features">
+      </command>
+   </extension>
+
+</plugin>

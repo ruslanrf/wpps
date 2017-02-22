@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="tuwien.dbai.wpps.mozeventstest.MozEventsTestApplication">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="RCP Perspective"
+            class="tuwien.dbai.wpps.mozeventstest.Perspective"
+            id="tuwien.dbai.wpps.mozeventstest.perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="tuwien.dbai.wpps.mozeventstest.browser.EMBrowserEditor"
+            default="false"
+            icon="html, htm, xhtml"
+            id="tuwien.dbai.wpps.mozeventstest.browsereditor"
+            name="Browser">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            categoryId="tuwien.dbai.wpps.mozuitest.category.mix"
+            defaultHandler="tuwien.dbai.wpps.mozeventstest.commandhandlers.MozEventsInjectHandler"
+            id="tuwien.dbai.wpps.mozeventstest.commands.injectlisteners"
+            name="Inject With Event Listeners">
+      </command>
+      <category
+            id="tuwien.dbai.wpps.mozuitest.category.mix"
+            name="mix">
+      </category>
+      <command
+            categoryId="tuwien.dbai.wpps.mozuitest.category.mix"
+            defaultHandler="tuwien.dbai.wpps.mozeventstest.commandhandlers.MozEventsPlayHandler"
+            id="tuwien.dbai.wpps.mozeventstest.commands.playTest"
+            name="play">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="tuwien.dbai.wpps.mozuitest.toolbars.mix">
+            <command
+                  commandId="tuwien.dbai.wpps.mozeventstest.commands.injectlisteners"
+                  id="tuwien.dbai.wpps.mozuitest.toolbars.command.mozwindowtest"
+                  style="push">
+            </command>
+            <command
+                  commandId="tuwien.dbai.wpps.mozeventstest.commands.playTest"
+                  style="push">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+
+</plugin>

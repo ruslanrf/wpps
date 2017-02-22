@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Rxtokenizer
+Bundle-SymbolicName: tuwien.dbai.wpps.rxtokenizer
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: tuwien.dbai.wpps.rxtokenizer.RXTokenizerActivator
+Require-Bundle: org.eclipse.core.runtime
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ClassPath: lib/rxtokenizer.jar,
+ .
+Export-Package: rxtokenizer,
+ tuwien.dbai.wpps.rxtokenizer

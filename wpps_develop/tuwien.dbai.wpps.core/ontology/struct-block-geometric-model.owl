@@ -1,0 +1,567 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY block "http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/block#" >
+    <!ENTITY common "http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/common#" >
+    <!ENTITY struct-block-geometric-model "http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model#"
+     xml:base="http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:common="http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/common#"
+     xmlns:struct-block-geometric-model="http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:block="http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/block#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model">
+        <rdfs:comment>This ontology reflects geometrical structure of the web page and its layout + CSS features</rdfs:comment>
+        <owl:imports rdf:resource="http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/block"/>
+        <owl:imports rdf:resource="http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/common"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model#containsBlock -->
+
+    <owl:ObjectProperty rdf:about="&struct-block-geometric-model;containsBlock">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:range rdf:resource="&block;Block"/>
+        <rdfs:domain rdf:resource="&struct-block-geometric-model;CompositeBlock"/>
+        <owl:inverseOf rdf:resource="&struct-block-geometric-model;inCompositeBlock"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model#containsBlocks -->
+
+    <owl:ObjectProperty rdf:about="&struct-block-geometric-model;containsBlocks">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:comment>range is rdf:Seq of blocks</rdfs:comment>
+        <rdfs:domain rdf:resource="&struct-block-geometric-model;CompositeBlock"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model#containsBox -->
+
+    <owl:ObjectProperty rdf:about="&struct-block-geometric-model;containsBox">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:range rdf:resource="&struct-block-geometric-model;Box"/>
+        <rdfs:subPropertyOf rdf:resource="&struct-block-geometric-model;containsBlock"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&struct-block-geometric-model;CompositeBlock"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="&struct-block-geometric-model;Box"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model#containsBoxes -->
+
+    <owl:ObjectProperty rdf:about="&struct-block-geometric-model;containsBoxes">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&struct-block-geometric-model;containsBlocks"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&struct-block-geometric-model;CompositeBlock"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="&struct-block-geometric-model;Box"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model#hasBoxType -->
+
+    <owl:ObjectProperty rdf:about="&struct-block-geometric-model;hasBoxType">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&struct-block-geometric-model;Box"/>
+        <rdfs:range rdf:resource="&struct-block-geometric-model;BoxType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model#hasChildPage -->
+
+    <owl:ObjectProperty rdf:about="&struct-block-geometric-model;hasChildPage">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:range rdf:resource="&struct-block-geometric-model;Page"/>
+        <rdfs:domain rdf:resource="&struct-block-geometric-model;Page"/>
+        <rdfs:subPropertyOf rdf:resource="&struct-block-geometric-model;containsBlock"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model#hasClientRectangle -->
+
+    <owl:ObjectProperty rdf:about="&struct-block-geometric-model;hasClientRectangle">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="&struct-block-geometric-model;Box"/>
+        <rdfs:range rdf:resource="&struct-block-geometric-model;Outline"/>
+        <rdfs:subPropertyOf rdf:resource="&struct-block-geometric-model;containsBlock"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model#hasClientRectangles -->
+
+    <owl:ObjectProperty rdf:about="&struct-block-geometric-model;hasClientRectangles">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="&struct-block-geometric-model;Box"/>
+        <rdfs:subPropertyOf rdf:resource="&struct-block-geometric-model;containsBlocks"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model#hasInnerBlock -->
+
+    <owl:ObjectProperty rdf:about="&struct-block-geometric-model;hasInnerBlock">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="&struct-block-geometric-model;Box"/>
+        <rdfs:range rdf:resource="&struct-block-geometric-model;InnerBlock"/>
+        <rdfs:subPropertyOf rdf:resource="&struct-block-geometric-model;containsBlock"/>
+        <owl:inverseOf rdf:resource="&struct-block-geometric-model;isInnerBlockOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model#hasOuterBlock -->
+
+    <owl:ObjectProperty rdf:about="&struct-block-geometric-model;hasOuterBlock">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="&struct-block-geometric-model;Box"/>
+        <rdfs:range rdf:resource="&struct-block-geometric-model;OuterBlock"/>
+        <rdfs:subPropertyOf rdf:resource="&struct-block-geometric-model;containsBlock"/>
+        <owl:inverseOf rdf:resource="&struct-block-geometric-model;isOuterBlockOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model#hasOutlineBlock -->
+
+    <owl:ObjectProperty rdf:about="&struct-block-geometric-model;hasOutlineBlock">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="&struct-block-geometric-model;Box"/>
+        <rdfs:range rdf:resource="&struct-block-geometric-model;OutlineBlock"/>
+        <rdfs:subPropertyOf rdf:resource="&struct-block-geometric-model;containsBlock"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model#hasTopPage -->
+
+    <owl:ObjectProperty rdf:about="&struct-block-geometric-model;hasTopPage">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="&struct-block-geometric-model;Document"/>
+        <rdfs:range rdf:resource="&struct-block-geometric-model;Page"/>
+        <rdfs:subPropertyOf rdf:resource="&struct-block-geometric-model;containsBlock"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model#hasViewPort -->
+
+    <owl:ObjectProperty rdf:about="&struct-block-geometric-model;hasViewPort">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="&struct-block-geometric-model;Page"/>
+        <rdfs:range rdf:resource="&struct-block-geometric-model;ViewPort"/>
+        <rdfs:subPropertyOf rdf:resource="&struct-block-geometric-model;containsBlock"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model#inCompositeBlock -->
+
+    <owl:ObjectProperty rdf:about="&struct-block-geometric-model;inCompositeBlock">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:comment>TODO: rename later to structInCompositeBlock</rdfs:comment>
+        <rdfs:domain rdf:resource="&block;Block"/>
+        <rdfs:range rdf:resource="&struct-block-geometric-model;CompositeBlock"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model#isBoxOf -->
+
+    <owl:ObjectProperty rdf:about="&struct-block-geometric-model;isBoxOf">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="&struct-block-geometric-model;Box"/>
+        <rdfs:subPropertyOf rdf:resource="&struct-block-geometric-model;inCompositeBlock"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model#isChildPageOf -->
+
+    <owl:ObjectProperty rdf:about="&struct-block-geometric-model;isChildPageOf">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:range rdf:resource="&struct-block-geometric-model;Page"/>
+        <rdfs:domain rdf:resource="&struct-block-geometric-model;Page"/>
+        <owl:inverseOf rdf:resource="&struct-block-geometric-model;hasChildPage"/>
+        <rdfs:subPropertyOf rdf:resource="&struct-block-geometric-model;inCompositeBlock"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model#isClientRectangleOf -->
+
+    <owl:ObjectProperty rdf:about="&struct-block-geometric-model;isClientRectangleOf">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:range rdf:resource="&struct-block-geometric-model;Box"/>
+        <rdfs:domain rdf:resource="&struct-block-geometric-model;Outline"/>
+        <rdfs:subPropertyOf rdf:resource="&struct-block-geometric-model;inCompositeBlock"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model#isInnerBlockOf -->
+
+    <owl:ObjectProperty rdf:about="&struct-block-geometric-model;isInnerBlockOf">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:range rdf:resource="&struct-block-geometric-model;Box"/>
+        <rdfs:domain rdf:resource="&struct-block-geometric-model;InnerBlock"/>
+        <rdfs:subPropertyOf rdf:resource="&struct-block-geometric-model;inCompositeBlock"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model#isOuterBlockOf -->
+
+    <owl:ObjectProperty rdf:about="&struct-block-geometric-model;isOuterBlockOf">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:range rdf:resource="&struct-block-geometric-model;Box"/>
+        <rdfs:domain rdf:resource="&struct-block-geometric-model;OuterBlock"/>
+        <rdfs:subPropertyOf rdf:resource="&struct-block-geometric-model;inCompositeBlock"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model#isOutlineBlockOf -->
+
+    <owl:ObjectProperty rdf:about="&struct-block-geometric-model;isOutlineBlockOf">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:range rdf:resource="&struct-block-geometric-model;Box"/>
+        <rdfs:domain rdf:resource="&struct-block-geometric-model;OutlineBlock"/>
+        <owl:inverseOf rdf:resource="&struct-block-geometric-model;hasOutlineBlock"/>
+        <rdfs:subPropertyOf rdf:resource="&struct-block-geometric-model;inCompositeBlock"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model#isViewPortOf -->
+
+    <owl:ObjectProperty rdf:about="&struct-block-geometric-model;isViewPortOf">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:range rdf:resource="&struct-block-geometric-model;Page"/>
+        <rdfs:domain rdf:resource="&struct-block-geometric-model;ViewPort"/>
+        <owl:inverseOf rdf:resource="&struct-block-geometric-model;hasViewPort"/>
+        <rdfs:subPropertyOf rdf:resource="&struct-block-geometric-model;inCompositeBlock"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/block#Block -->
+
+    <owl:Class rdf:about="&block;Block">
+        <rdfs:subClassOf rdf:resource="&common;Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/common#Object -->
+
+    <rdf:Description rdf:about="&common;Object">
+        <owl:disjointWith rdf:resource="&struct-block-geometric-model;BoxType"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model#BasicBlock -->
+
+    <owl:Class rdf:about="&struct-block-geometric-model;BasicBlock">
+        <rdfs:subClassOf rdf:resource="&block;Block"/>
+        <owl:disjointWith rdf:resource="&struct-block-geometric-model;CompositeBlock"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model#BoundingBlock -->
+
+    <owl:Class rdf:about="&struct-block-geometric-model;BoundingBlock">
+        <rdfs:subClassOf rdf:resource="&struct-block-geometric-model;CompositeBlock"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model#Box -->
+
+    <owl:Class rdf:about="&struct-block-geometric-model;Box">
+        <rdfs:subClassOf rdf:resource="&struct-block-geometric-model;CompositeBlock"/>
+        <rdfs:comment>We do not create other types related to the Table structure (row, column, groups).
+
+Box is a rectangle. But this class can be taken from GO ontology.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model#BoxType -->
+
+    <owl:Class rdf:about="&struct-block-geometric-model;BoxType"/>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model#CompositeBlock -->
+
+    <owl:Class rdf:about="&struct-block-geometric-model;CompositeBlock">
+        <rdfs:subClassOf rdf:resource="&block;Block"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model#Document -->
+
+    <owl:Class rdf:about="&struct-block-geometric-model;Document">
+        <rdfs:subClassOf rdf:resource="&struct-block-geometric-model;CompositeBlock"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model#InnerBlock -->
+
+    <owl:Class rdf:about="&struct-block-geometric-model;InnerBlock">
+        <rdfs:subClassOf rdf:resource="&struct-block-geometric-model;BasicBlock"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model#OuterBlock -->
+
+    <owl:Class rdf:about="&struct-block-geometric-model;OuterBlock">
+        <rdfs:subClassOf rdf:resource="&struct-block-geometric-model;BasicBlock"/>
+        <rdfs:comment>Can be both composite and Basic, can be BoundingBlock</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model#Outline -->
+
+    <owl:Class rdf:about="&struct-block-geometric-model;Outline">
+        <rdfs:subClassOf rdf:resource="&struct-block-geometric-model;BasicBlock"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model#OutlineBlock -->
+
+    <owl:Class rdf:about="&struct-block-geometric-model;OutlineBlock">
+        <rdfs:subClassOf rdf:resource="&struct-block-geometric-model;BasicBlock"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model#Page -->
+
+    <owl:Class rdf:about="&struct-block-geometric-model;Page">
+        <rdfs:subClassOf rdf:resource="&struct-block-geometric-model;CompositeBlock"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model#ViewPort -->
+
+    <owl:Class rdf:about="&struct-block-geometric-model;ViewPort">
+        <rdfs:subClassOf rdf:resource="&struct-block-geometric-model;CompositeBlock"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Ontology -->
+
+    <owl:Class rdf:about="&owl;Ontology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model#BlockLevelElement -->
+
+    <owl:Thing rdf:about="&struct-block-geometric-model;BlockLevelElement">
+        <rdf:type rdf:resource="&struct-block-geometric-model;BoxType"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model#InlineLevelElement -->
+
+    <owl:Thing rdf:about="&struct-block-geometric-model;InlineLevelElement">
+        <rdf:type rdf:resource="&struct-block-geometric-model;BoxType"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model#TableElement -->
+
+    <owl:Thing rdf:about="&struct-block-geometric-model;TableElement">
+        <rdf:type rdf:resource="&struct-block-geometric-model;BoxType"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-block-geometric-model#UnknownBoxType -->
+
+    <owl:Thing rdf:about="&struct-block-geometric-model;UnknownBoxType">
+        <rdf:type rdf:resource="&struct-block-geometric-model;BoxType"/>
+    </owl:Thing>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&struct-block-geometric-model;InnerBlock"/>
+            <rdf:Description rdf:about="&struct-block-geometric-model;OuterBlock"/>
+            <rdf:Description rdf:about="&struct-block-geometric-model;Outline"/>
+            <rdf:Description rdf:about="&struct-block-geometric-model;OutlineBlock"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&struct-block-geometric-model;BoundingBlock"/>
+            <rdf:Description rdf:about="&struct-block-geometric-model;Box"/>
+            <rdf:Description rdf:about="&struct-block-geometric-model;Document"/>
+            <rdf:Description rdf:about="&struct-block-geometric-model;Page"/>
+            <rdf:Description rdf:about="&struct-block-geometric-model;ViewPort"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
