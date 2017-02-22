@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<wpps-config>
+<!-- 2. Containment via Compute based on composite qlt rel, enriched with symmetric relations -->
+
+	<!-- === Ontologies to be generated === -->
+	<ontology-instance-ns-gen-base>http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/inst-</ontology-instance-ns-gen-base>
+	<ontology>
+		<type>OWL</type>
+		<reasoner-type>JENA_REASONER</reasoner-type>
+		<jena-reasoner>OWL_MEM</jena-reasoner>
+		<load-schemata>true</load-schemata>
+		<sub-model>STRUCT_BLOCK_GEOM_MODEL</sub-model>
+		<sub-model>QNT_BLOCK_MODEL</sub-model>
+		<sub-model>QLT_BLOCK_MODEL</sub-model>
+	</ontology>
+
+	<ontology>
+		<type>OWL</type>
+		<reasoner-type>JENA_REASONER</reasoner-type>
+		<jena-reasoner>OWL_MEM</jena-reasoner>
+		<load-schemata>false</load-schemata>
+		<sub-model>DOM</sub-model>
+		<sub-model>INTERFACE_MODEL</sub-model>
+		<sub-model>STRUCT_VISUAL_MODEL</sub-model>
+		<sub-model>QNT_VISUAL_MODEL</sub-model>
+	</ontology>
+
+	<ontology>
+		<type>OWL</type>
+		<reasoner-type>JENA_REASONER</reasoner-type>
+		<jena-reasoner>OWL_MEM</jena-reasoner>
+		<load-schemata>true</load-schemata>
+		<sub-model>LOGICAL_MODEL</sub-model>
+	</ontology>
+
+	<simplification>false</simplification>
+	<!-- TODO: rename UOM simlification -->
+
+	<!-- relates only to the block containment + DOM -->
+	<struct-one-to-many-relation sub-model="STRUCT_BLOCK_GEOM_MODEL">SEPARATE_STATEMENTS</struct-one-to-many-relation>
+	<struct-one-to-many-relation sub-model="LOGICAL_MODEL">SEPARATE_STATEMENTS</struct-one-to-many-relation>
+
+	<!-- === Ontologies schemeta location === -->
+	<schemata>
+		<!--<alt-load>
+			<schemata-name>RESULTS_MODEL_ONT</schemata-name>
+			<alt-uri>file:///home/ruslan/wppsModel/result.owl</alt-uri>
+		</alt-load>-->
+		<alt-load>
+			<schemata-name>LOGICAL_MODEL_ONT</schemata-name>
+			<!--<alt-uri>file:///home/ruslan/wppsModel/logical-model.owl</alt-uri>-->
+			<alt-relative-uri>/ontology/logical-model.owl</alt-relative-uri>
+		</alt-load>
+		<alt-load>
+			<schemata-name>STRUCT_VISUAL_MODEL_ONT</schemata-name>
+			<!--<base-uri>http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/struct-visual-object</base-uri>-->
+			<!--<alt-uri>file:///home/ruslan/wppsModel/struct-visual-model.owl</alt-uri>-->
+			<alt-relative-uri>/ontology/struct-visual-model.owl</alt-relative-uri>
+		</alt-load>
+		<alt-load>
+			<schemata-name>QNT_VISUAL_MODEL_ONT</schemata-name>
+			<!--<base-uri>http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qnt-visual-model</base-uri>-->
+			<!--<alt-uri>file:///home/ruslan/wppsModel/qnt-visual-model.owl</alt-uri>-->
+			<alt-relative-uri>/ontology/qnt-visual-model.owl</alt-relative-uri>
+		</alt-load>
+		<alt-load>
+			<schemata-name>STRUCT_BLOCK_GEOMETRIC_MODEL_ONT</schemata-name>
+			<!--<base-uri>http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/block-geometric-object</base-uri>-->
+			<!--<alt-uri>file:///home/ruslan/wppsModel/struct-block-geometric-model.owl</alt-uri>-->
+			<alt-relative-uri>/ontology/struct-block-geometric-model.owl</alt-relative-uri>
+		</alt-load>
+		<alt-load>
+			<schemata-name>QLT_BLOCK_MODEL_ONT</schemata-name>
+			<!--<base-uri>http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qlt-block-model</base-uri>-->
+			<!--<alt-uri>file:///home/ruslan/wppsModel/qlt-block-model.owl</alt-uri>-->
+			<alt-relative-uri>/ontology/qlt-block-model.owl</alt-relative-uri>
+		</alt-load>
+		<alt-load>
+			<schemata-name>QNT_BLOCK_MODEL_ONT</schemata-name>
+			<!--<base-uri>http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/qnt-block-model</base-uri>-->
+			<!--<alt-uri>file:///home/ruslan/wppsModel/qnt-block-model.owl</alt-uri>-->
+			<alt-relative-uri>/ontology/qnt-block-model.owl</alt-relative-uri>
+		</alt-load>
+		<alt-load>
+			<schemata-name>BLOCK_ONT</schemata-name>
+			<!--<base-uri>http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/block</base-uri>-->
+			<!--<alt-uri>file:///home/ruslan/wppsModel/block.owl</alt-uri>-->
+			<alt-relative-uri>/ontology/block.owl</alt-relative-uri>
+		</alt-load>
+		<alt-load>
+			<schemata-name>INTERFACE_MODEL_ONT</schemata-name>
+			<!--<base-uri>http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/wpbi-model</base-uri>-->
+			<!--<alt-uri>file:///home/ruslan/wppsModel/interface-model.owl</alt-uri>-->
+			<alt-relative-uri>/ontology/interface-model.owl</alt-relative-uri>
+		</alt-load>
+		<alt-load>
+			<schemata-name>DOM_ONT</schemata-name>
+			<!--<base-uri>http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/dom</base-uri>-->
+			<!--<alt-uri>file:///home/ruslan/wppsModel/dom.owl</alt-uri>-->
+			<alt-relative-uri>/ontology/dom.owl</alt-relative-uri>
+		</alt-load>
+		<alt-load>
+			<schemata-name>COMMON_ONT</schemata-name>
+			<!--<base-uri>http://www.dbai.tuwien.ac.at/proj/wpps/ontologies/common</base-uri>-->
+			<!--<alt-uri>file:///home/ruslan/wppsModel/common.owl</alt-uri>-->
+			<alt-relative-uri>/ontology/common.owl</alt-relative-uri>
+		</alt-load>
+	</schemata>
+
+	<!-- === Ontology Instances configuration === -->
+	<create-in-ontology>
+		<!-- Instances in BGM -->
+		<item>DOCUMENT_BLOCK</item>
+		<item>PAGE_BLOCK</item>
+		<item>VIEW_PORT_BLOCK</item>
+		<item>BOX</item>
+		<!--<item>INNER_BLOCK</item>-->
+		<!--<item>OUTER_BLOCK</item>-->
+		<item>OUTLINE</item> <!-- additionally used for Boxes' client rectangles -->
+		<item>BOUNDING_BLOCK</item>
+		<item>QNT_BLOCK</item>
+		<item>QLT_BLOCK</item>
+		<!-- Attributes in QntBGM-->
+		<item>X_MIN</item>
+		<item>Y_MIN</item>
+		<item>X_MAX</item>
+		<item>Y_MAX</item>
+
+		<!-- For IM Elements. Only for instances of these types other types will be created -->
+		<!-- implement as a sets -->
+		<!--<dependency></dependency>-->
+		<!--<dependency>INTERFACE_MODEL</dependency>-->
+
+<!-- other attributes and relations are always in the ontology -->
+	</create-in-ontology>
+
+<!-- This relations should be supported by adapters. Relations can be instantiated by Enrichers -->
+	<support-in-ontology>
+		<!-- Instances of LM -->
+		<item>SEQUENCE</item>
+		<item>SEQUENCE_ITEM</item>
+		<!-- Relations in QltBBGM-->
+		<item>RCC8</item>
+	</support-in-ontology>
+
+	<!-- SBGM -->
+	<client-rectangle-creation>NONE</client-rectangle-creation>
+<!-- AUTO - client rectangle is created for a box only if there are several of them-->
+
+	<composite-basic-dependence>
+		<item>RCC8</item>
+	</composite-basic-dependence>
+
+	<location>ALL</location>
+
+	<qltbm-border-mu-type>INTERVAL</qltbm-border-mu-type>
+	<qltbm-left-border-mu>
+		<left-point>0</left-point>
+		<right-point>0</right-point>
+	</qltbm-left-border-mu>
+	<qltbm-right-border-mu>
+		<left-point>0</left-point>
+		<right-point>0</right-point>
+	</qltbm-right-border-mu>
+	<qltbm-center-mu>
+		<left-point>0</left-point>
+		<right-point>0</right-point>
+	</qltbm-center-mu>
+
+	<qltbm-border-nu>
+		<center>0.5</center>
+		<delta>0</delta>
+	</qltbm-border-nu>
+
+</wpps-config>
+

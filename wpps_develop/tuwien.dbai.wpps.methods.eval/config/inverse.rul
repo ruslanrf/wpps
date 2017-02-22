@@ -1,0 +1,14 @@
+@prefix owl: http://www.w3.org/2002/07/owl#
+
+[inverseProp1: 
+	(?a ?sp1 ?b)
+	(?sp1 owl:inverseOf ?sp2)
+	->
+	(?b ?sp2 ?a)]
+
+[inverseProp2:
+	(?a ?sp1 ?b)
+	(?sp2 owl:inverseOf ?sp1)
+	->
+	(?b ?sp2 ?a)]
+
