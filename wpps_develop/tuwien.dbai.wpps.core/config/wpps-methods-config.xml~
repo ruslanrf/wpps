@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<wpps-methods-config>
+
+<!-- Christian -->
+
+    <method id="c44645e0-45f5-11e2-bcfd-0800200c9a66"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="Christian"
+			minor-name="Avatar"
+			description="Avatar">
+		<java-class name="tuwien.dbai.wpps.methods.christian.forum.Avatar"/>
+	</method>
+	<method id="c44645e0-45f5-11e2-bcfd-0840200c9a66"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="Christian"
+			minor-name="Content"
+			description="Content">
+		<java-class name="tuwien.dbai.wpps.methods.christian.forum.Content"/>
+	</method>
+	<method id="45bd4959-6c82-4979-b388-901e17de1ae3"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="Christian"
+			minor-name="DateTime"
+			description="DateTime">
+		<java-class name="tuwien.dbai.wpps.methods.christian.forum.DateTime"/>
+	</method>
+	<method id="916fffd7-7f15-4bb0-ba25-326c4bcad623"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="Christian"
+			minor-name="Title"
+			description="Title">
+		<java-class name="tuwien.dbai.wpps.methods.christian.forum.Title"/>
+	</method>
+	<method id="8da51201-6b76-498c-a82b-90c426c9ecbb"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="Christian"
+			minor-name="Name"
+			description="Name">
+		<java-class name="tuwien.dbai.wpps.methods.christian.forum.Name"/>
+	</method>
+	<method id="ccb9ed04-2157-484c-9694-576ee43801e4"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="Christian"
+			minor-name="Id"
+			description="Id">
+		<java-class name="tuwien.dbai.wpps.methods.christian.forum.Id"/>
+	</method>
+    
+<!-- -->
+
+<method id="a3346978-8f29-11e1-ae80-00247e160239"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="Navigation menu"
+			minor-name="Simple horizontal navigation menu"
+			description="Simple one-row horizontally oriented navigation menu">
+		<java-class name="tuwien.dbai.wpps.core.methods.navmenu.NavMenuHor1LevelWrapper"/>
+	</method>
+	<method id="ae22774e-8f29-11e1-b28e-00247e160239"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="Navigation menu"
+			minor-name="Simple vertical navigation menu"
+			description="Simple one-line vertically oriented navigation menu">
+		<java-class name="tuwien.dbai.wpps.core.methods.navmenu.NavMenuVert1LevelWrapper"/>
+	</method>
+	<method id="b8638018-8f29-11e1-9b6b-00247e160239"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="Navigation menu"
+			minor-name="Hierarchical vertical navigation menu"
+			description="Hierarchical vertically oriented navigation menu">
+		<java-class name="tuwien.dbai.wpps.core.methods.navmenu.NavMenuVertHierarchWrapper"/>
+	</method>
+	<method id="bf4fb0ae-8f29-11e1-84cb-00247e160239"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="Forum Posts"
+			minor-name="Simple forum posts"
+			description="...">
+		<java-class name="tuwien.dbai.wpps.core.methods.forum.SimpleForumWrapper"/>
+	</method>
+	<method id="bf4fb0ae-8f29-11e1-84cb-00247e160239"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="Forum Posts"
+			minor-name="Main content"
+			description="...">
+		<java-class name="tuwien.dbai.wpps.core.methods.forum.SimpleForumWrapper"/>
+	</method>
+	
+	<method id="0b82de6a-8f2a-11e1-ac62-00247e160239"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="Mix"
+			minor-name="Rectangular grouping"
+			description="Simple groupping blocks to have a rectangular form.">
+		<java-class name="tuwien.dbai.wpps.core.methods.segmentation.BoxesRectangularGrouping"/>
+	</method>
+
+	<method id="97581296-149c-11e2-8bcd-00247e160239"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="Mix"
+			minor-name="Identify IP string"
+			description="Get IP for hidemyass.com">
+		<java-class name="tuwien.dbai.wpps.core.methods.mix.GetIPHideMyAss"/>
+	</method>
+
+	<method id="84ab1352-7fb5-11e3-8fa5-fb7f836f6796"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="Mix"
+			minor-name="Test"
+			description="Test">
+		<java-class name="tuwien.dbai.wpps.core.methods.mix.TestWrapper"/>
+	</method>
+	
+	<method id="d76ca0f2-22db-11e2-8f9e-00247e160239"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="Segmentation"
+			minor-name="XY Cut"
+			description="XY Cut">
+		<java-class name="tuwien.dbai.wpps.core.methods.segmentation.xycut.XYCut"/>
+	</method>
+	<method id="d76ca0f2-22db-11e2-8f9e-00247e160239"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="Segmentation"
+			minor-name="VIPS"
+			description="VIPS">
+		<java-class name="tuwien.dbai.wpps.core.methods.segmentation.xycut.XYCut"/>
+	</method>
+
+	
+<!-- ENRICHERS -->
+
+	<method id="01ee2594-8fe3-11e1-93b5-00247e160239"
+			gen-type="INTERNAL"
+			type="ENRICHER"
+			major-name="Color"
+			minor-name="Background color"
+			description="Enricher for background color detection.">
+		<java-class name="tuwien.dbai.wpps.core.methods.enrichers.BGColorEnricher"/>
+	</method>
+	
+	
+
+
+<!-- SIMPLE WRAPPERS FOR CNN -->
+	<method id="374e3f54-3726-11e2-ba27-00247e160239"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="CNN"
+			minor-name="Cathegory"
+			description=" ">
+		<java-class name="tuwien.dbai.wpps.methods.cnn.CathegoriesFull"/>
+	</method>
+	
+	<method id="e2ded2c0-373a-11e2-b850-00247e160239"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="Mix"
+			minor-name="Image with caption"
+			description=" ">
+		<java-class name="tuwien.dbai.wpps.methods.cnn.ImageAndCaptionQnt"/>
+	</method>
+	
+<!-- Eval -->
+	<method id="f0e66f42-f57e-11e2-bfa4-00247e160239"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="WPPS Evaluation"
+			minor-name="1ARTree(Q1)"
+			description=" ">
+		<java-class name="tuwien.dbai.wpps.methods.eval.basic.Cont1ARTree"/>
+	</method>
+	
+	<method id="8d2f78a6-f644-11e2-b4b7-00247e160239"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="WPPS Evaluation"
+			minor-name="Cont 2 (B) ExhSearchQntRel"
+			description=" ">
+		<java-class name="tuwien.dbai.wpps.methods.eval.basic.Cont2BExhSearchQntRel"/>
+	</method>
+
+	<method id="8871c790-f894-11e2-b240-00247e160239"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="WPPS Evaluation"
+			minor-name="Cont 3 (C) ExhSearchBasicRel"
+			description=" ">
+		<java-class name="tuwien.dbai.wpps.methods.eval.basic.Cont3CExhSearchBasicRel"/>
+	</method>
+	<method id="ba273742-fb83-11e2-b500-00247e160239"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="WPPS Evaluation"
+			minor-name="Cont 4 (C) ExhSearchCompRel"
+			description=" ">
+		<java-class name="tuwien.dbai.wpps.methods.eval.basic.Cont4CExhSearchCompRel"/>
+	</method>
+	<method id="c4b80cea-fb83-11e2-b0cc-00247e160239"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="WPPS Evaluation"
+			minor-name="Cont 5 (C) QueryBasicRel"
+			description=" ">
+		<java-class name="tuwien.dbai.wpps.methods.eval.basic.Cont5CQueryBasicRel"/>
+	</method>
+	<method id="c0b2f732-fb87-11e2-8d8d-00247e160239"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="WPPS Evaluation"
+			minor-name="Cont 6 (C) QueryRDFSCompRel"
+			description=" ">
+		<java-class name="tuwien.dbai.wpps.methods.eval.basic.Cont67CQueryCompRel"/>
+	</method>
+	<method id="492ab8e8-fdfe-11e2-a9c3-00247e160239"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="WPPS Evaluation"
+			minor-name="Cont 7 (C) QueryCompRelPRules"
+			description=" ">
+		<java-class name="tuwien.dbai.wpps.methods.eval.basic.Cont67CQueryCompRel"/>
+	</method>
+	<method id="b11b2b64-fc68-11e2-93d7-00247e160239"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="WPPS Evaluation"
+			minor-name="Cont 8 (D) ExhSearchBasicRel"
+			description=" ">
+		<java-class name="tuwien.dbai.wpps.methods.eval.basic.Cont8DExhSearchBasicRel"/>
+	</method>
+	<method id="48745850-fc69-11e2-9cc9-00247e160239"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="WPPS Evaluation"
+			minor-name="Cont 9 (D) ExhSearchBasicRelSIRules"
+			description=" ">
+		<java-class name="tuwien.dbai.wpps.methods.eval.basic.Cont9DExhSearchBasicRelSIRules"/>
+	</method>
+	<method id="680afd54-fc69-11e2-8256-00247e160239"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="WPPS Evaluation"
+			minor-name="Cont 10 (D) QueryBasicRel"
+			description=" ">
+		<java-class name="tuwien.dbai.wpps.methods.eval.basic.Cont10DQueryBasicRel"/>
+	</method>
+	<method id="8b1221b0-fc69-11e2-bc3d-00247e160239"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="WPPS Evaluation"
+			minor-name="Cont 11 (D) QueryBasicRelSIRules"
+			description=" ">
+		<java-class name="tuwien.dbai.wpps.methods.eval.basic.Cont11DQueryBasicRelSIRules"/>
+	</method>
+	<method id="b1b76d16-fc69-11e2-b5a5-00247e160239"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="WPPS Evaluation"
+			minor-name="Cont 12 (D) QueryDLCompRel"
+			description=" ">
+		<java-class name="tuwien.dbai.wpps.methods.eval.basic.ContDQueryCompRel"/>
+	</method>
+	<method id="e22b6984-fc69-11e2-9f4a-00247e160239"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="WPPS Evaluation"
+			minor-name="Cont 13 (D) QueryRDFSCompRelIRules"
+			description=" ">
+		<java-class name="tuwien.dbai.wpps.methods.eval.basic.ContDQueryCompRel"/>
+	</method>
+	<method id="f416497a-fc69-11e2-9b4b-00247e160239"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="WPPS Evaluation"
+			minor-name="Cont 14 (D) QueryCompRelSIPRules"
+			description=" ">
+		<java-class name="tuwien.dbai.wpps.methods.eval.basic.ContDQueryCompRel"/>
+	</method>
+
+<!-- EVAL2 -->
+	<method id="9a001300-3c0e-11e3-a0db-00247e160239"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="WPPS Evaluation"
+			minor-name="Cont 1 (A) Q2 R-tree"
+			description=" ">
+		<java-class name="tuwien.dbai.wpps.methods.eval.basic.Cont1Q2ARTree"/>
+	</method>
+	<method id="cfd3f0b2-3b52-11e3-a108-00247e160239"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="WPPS Evaluation"
+			minor-name="Cont 2 (B) Q2 ExhSearchQntRel"
+			description=" ">
+		<java-class name="tuwien.dbai.wpps.methods.eval.basic.Cont2Q2BExhSearchQntRel"/>
+	</method>
+	<method id="c32da42c-3c22-11e3-a6c7-00247e160239"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="WPPS Evaluation"
+			minor-name="Cont 3 (C) Q2 ExhSearchBasicRel"
+			description=" ">
+		<java-class name="tuwien.dbai.wpps.methods.eval.basic.Cont3Q2CExhSearchBasicRel"/>
+	</method>
+<method id="530f33a6-3c2f-11e3-a6eb-00247e160239"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="WPPS Evaluation"
+			minor-name="Cont 4 (C) Q2 ExhSearchCompRel"
+			description=" ">
+		<java-class name="tuwien.dbai.wpps.methods.eval.basic.Cont4Q2CExhSearchCompRel"/>
+	</method>
+<method id="b8236216-3c12-11e3-b172-00247e160239"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="WPPS Evaluation"
+			minor-name="Cont 5 (C) Q2 QueryBasicRel"
+			description=" ">
+		<java-class name="tuwien.dbai.wpps.methods.eval.basic.Cont5Q2CQueryBasicRel"/>
+	</method>
+	<method id="480b8056-3bd3-11e3-a5f3-00247e160239"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="WPPS Evaluation"
+			minor-name="Cont 6 (C) Q2 QueryRDFSCompRel"
+			description=" ">
+		<java-class name="tuwien.dbai.wpps.methods.eval.basic.Cont67Q2CQueryCompRel"/>
+	</method>
+<method id="03f524a8-3ca0-11e3-bd10-00247e160239"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="WPPS Evaluation"
+			minor-name="Cont 7 (C) Q2 QueryCompRelPRules"
+			description=" ">
+		<java-class name="tuwien.dbai.wpps.methods.eval.basic.Cont67Q2CQueryCompRel"/>
+	</method>
+<method id="fc665570-3ca6-11e3-af4a-00247e160239"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="WPPS Evaluation"
+			minor-name="Cont 8 (D) Q2 ExhSearchBasicRel"
+			description=" ">
+		<java-class name="tuwien.dbai.wpps.methods.eval.basic.Cont8Q2DExhSearchBasicRel"/>
+	</method>
+<method id="0c33c518-3cad-11e3-9a8f-00247e160239"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="WPPS Evaluation"
+			minor-name="Cont 9 (D) Q2 ExhSearchBasicRelSIRules"
+			description=" ">
+		<java-class name="tuwien.dbai.wpps.methods.eval.basic.Cont9Q2DExhSearchBasicRelSIRules"/>
+	</method>
+	<method id="fd1bba9e-3b59-11e3-ae6d-00247e160239"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="WPPS Evaluation"
+			minor-name="Cont 10 (D) Q2 QueryBasicRel"
+			description=" ">
+		<java-class name="tuwien.dbai.wpps.methods.eval.basic.Cont10Q2DQueryBasicRel"/>
+	</method>
+<method id="d32dbce0-3cb3-11e3-9352-00247e160239"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="WPPS Evaluation"
+			minor-name="Cont 11 (D) Q2 QueryBasicRelSIRules"
+			description=" ">
+		<java-class name="tuwien.dbai.wpps.methods.eval.basic.Cont11Q2DQueryBasicRelSIRules"/>
+	</method>
+<method id="ada93312-3cba-11e3-9287-00247e160239"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="WPPS Evaluation"
+			minor-name="Cont 12 (D) Q2 QueryDLCompRel"
+			description=" ">
+		<java-class name="tuwien.dbai.wpps.methods.eval.basic.ContDQ2QueryCompRel"/>
+	</method>
+<method id="38be3428-3ccc-11e3-8f6c-00247e160239"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="WPPS Evaluation"
+			minor-name="Cont 13 (D) Q2 QueryRDFSCompRelIRules"
+			description=" ">
+		<java-class name="tuwien.dbai.wpps.methods.eval.basic.ContDQ2QueryCompRel"/>
+	</method>
+<method id="235a3210-3cd3-11e3-8406-00247e160239"
+			gen-type="INTERNAL"
+			type="WRAPPER"
+			major-name="WPPS Evaluation"
+			minor-name="Cont 14 (D) Q2 QueryCompRelSIPRules"
+			description=" ">
+		<java-class name="tuwien.dbai.wpps.methods.eval.basic.ContDQ2QueryCompRel"/>
+	</method>
+
+</wpps-methods-config>
+
