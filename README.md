@@ -1,5 +1,6 @@
 # WPPS
 A Web Page Processing System
+WPPS, Version 1.0.0.
 
 
 [Platforms](https://sourceforge.net/projects/wpps-platforms/files/1.0.0/wpps_platforms.zip/download)
