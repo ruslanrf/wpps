@@ -51,10 +51,7 @@ year = {2012}
 
 ## License
 
-Copyright (c) 2010-2017, [Ruslan Fayzrakhmanov](http://www.dbai.tuwien.ac.at/staff/fayzrakh/).
-
 This project is licensed under the GNU Library General Public License, Version 2,
-June 1991 (in the distribution as file licence.html, and also available at http://gate.ac.uk/gate/licence.html).
+June 1991 (in the distribution as file `LICENSE.txt`).
 This license has been chosen because of the code from Gate (class ColorGenerator.java in the tuwien.dbai.wpps.colors plugin) published under this license and
 Java Spatial Index Library (the tuwien.dbai.wpps.core.spatialindex.jsi package in the tuwien.dbai.wpps.core plugin) published under LGPL v. 2.1.
-See the top-level file `LICENSE.txt`.
