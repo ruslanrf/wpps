@@ -17,17 +17,17 @@ The WPPS framework requires Eclipse (Indigo) RCP, and [Zest v. 2.0.0](https://gi
 All other necessary plug-ins are provided separately as a target platform, `wpps_platform`.
 
 The simplest approach to "install" WPPS is
-**1.** to [download]((https://sourceforge.net/projects/wpps-platforms/files/1.0.0/wpps_platforms.zip/download)) Eclipse with Zest plugins as well as the WPPS platform.
-**2.** Unpack a downloaded `wpps_platforms.zip` and execute Eclipse, stored in the folder `eclipseRcpIndigoSR2LinuxGtkX86_64WPPS`.
-**3.** Specify the [target platform](http://www.vogella.com/tutorials/EclipseTargetPlatform/article.html). For that open a file `wpps.target` in the plugin `tuwien.dbai.wpps.releng`.
+**(1)** to [download]((https://sourceforge.net/projects/wpps-platforms/files/1.0.0/wpps_platforms.zip/download)) Eclipse with Zest plugins as well as the WPPS platform.
+**(2)** Unpack a downloaded `wpps_platforms.zip` and execute Eclipse, stored in the folder `eclipseRcpIndigoSR2LinuxGtkX86_64WPPS`.
+**(3)** Specify the [target platform](http://www.vogella.com/tutorials/EclipseTargetPlatform/article.html). For that open a file `wpps.target` in the plugin `tuwien.dbai.wpps.releng`.
 In the Location section ensure that `${eclipse_home}` point at the folder `eclipseRcpIndigoSR2LinuxGtkX86_64WPPS`.
 For the variable `${wpps_platform}`, specify a file path to the directory `wpps_platform` and click "Set as Target Platform" (top left corner).
-**4.** [Import launch configuration](http://www.vogella.com/tutorials/EclipseLauncherFramework/article.html#import-a-launch-configuration) `WPPSUI.launch` from the directory `launch_configs`.
+**(4)** [Import launch configuration](http://www.vogella.com/tutorials/EclipseLauncherFramework/article.html#import-a-launch-configuration) `WPPSUI.launch` from the directory `launch_configs`.
 This configuration can be used to execute the WPPS framework.
 
 ### ObjIdent
 
-Please follow steps **1--3** for installing WPPS and import a launch configuration `ObjIdent.launch` from the directory `launch_configs`.
+Please follow steps **(1--3)** for installing WPPS and import a launch configuration `ObjIdent.launch` from the directory `launch_configs`.
 This configuration can be used to execute ObjIdent for annotating web pages.
 The GUI is configured for annotating pages with labeles from the transportation domain.
 
