@@ -53,5 +53,5 @@ year = {2012}
 
 This project is licensed under the GNU Library General Public License, Version 2,
 June 1991 (in the distribution as file `LICENSE.txt`).
-This license has been chosen because of the code from Gate (class ColorGenerator.java in the tuwien.dbai.wpps.colors plugin) published under this license and
-Java Spatial Index Library (the tuwien.dbai.wpps.core.spatialindex.jsi package in the tuwien.dbai.wpps.core plugin) published under LGPL v. 2.1.
+This license has been chosen due to the use of the code from Gate (a class `ColorGenerator.java` in the `tuwien.dbai.wpps.colors` plugin) published under this license and
+Java Spatial Index Library (the `tuwien.dbai.wpps.core.spatialindex.jsi` package in the `tuwien.dbai.wpps.core` plugin) published under LGPL v. 2.1.
