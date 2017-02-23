@@ -17,7 +17,7 @@ The WPPS framework requires Eclipse (Indigo) RCP, and [Zest v. 2.0.0](https://gi
 All other necessary plug-ins are provided separately as a target platform, `wpps_platform`.
 
 The simplest approach to "install" WPPS is
-**(1)** to [download]((https://sourceforge.net/projects/wpps-platforms/files/1.0.0/wpps_platforms.zip/download)) Eclipse with Zest plugins as well as the WPPS platform.
+**(1)** to [download](https://sourceforge.net/projects/wpps-platforms/files/1.0.0/wpps_platforms.zip/download) Eclipse with Zest plugins as well as the WPPS platform.
 **(2)** Unpack a downloaded `wpps_platforms.zip` and execute Eclipse, stored in the folder `eclipseRcpIndigoSR2LinuxGtkX86_64WPPS`.
 **(3)** Specify the [target platform](http://www.vogella.com/tutorials/EclipseTargetPlatform/article.html). For that open a file `wpps.target` in the plugin `tuwien.dbai.wpps.releng`.
 In the Location section ensure that `${eclipse_home}` point at the folder `eclipseRcpIndigoSR2LinuxGtkX86_64WPPS`.
